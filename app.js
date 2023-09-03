@@ -15,8 +15,16 @@ app.get('/', (req, res) => {
 */
 
 //si dentro de public crei una carpeta hola-mundo, no va a ejecutar esta línea
-app.get('/hola-mundo', (req, res) => {
-    res.send('Hola mundo');
+//app.get('/hola-mundo', (req, res) => {
+//    res.send('Hola mundo');
+//});
+
+app.get('/generic', (req, res) => {
+    res.sendFile(__dirname + '/public/generic.html');
+});
+
+app.get('/elements', (req, res) => {
+    res.sendFile(__dirname + '/public/elements.html');
 });
 
 app.get('*', (req, res) => {
